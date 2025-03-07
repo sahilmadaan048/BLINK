@@ -1,34 +1,43 @@
-use std::io::{self, Read};
+use crossterm::event::KeyEvent;
+// use std::io::{self, Read};
 use crossterm::terminal::{disable_raw_mode, enable_raw_mode};
-use crossterm::event::{read, Event::Key, KeyCode::Char}
+use crossterm::event::{read, Event::Key, KeyCode::Char};
 
-pub struct Editor {}
+pub struct Editor {
+    should_quit: bool,
+}
 
 impl Editor {
     pub fn default() -> Self {
-        Editor {}
+        Editor {should_quit: false}
     }
+
     pub fn run(&mut self) {
-        enable_raw_mode().unwrap();
+        if let Err(err) = self.repl() {
+            panic!("{err:?}");
+        }
+        print!("Goodbye.\r\n");
+    }
 
-        for b in io::stdin().bytes() {
-            match b {
-                Ok(b) => {
-                    let c = b as char; // Convert to char
-
-                    if c.is_control() {
-                        println!("Binary: {0:08b} ASCII: {0:3} \r", b);
-                    } else {
-                        println!("Binary: {0:08b} ASCII: {0:3} Character: {1:#?}\r", b, c);
+    fn repl(&mut self) -> Result<(), std::io::Error> {
+        enable_raw_mode();
+        loop {
+            if let Key(KeyEvent{
+                code,  modifiers, kind, state
+            }) = read()? {
+                println!("Code: {code:?} Modifiers: {modifiers:?} Kind: {kind:?} State: {state:?} \r"); 1
+                match code {
+                    Char('q') if modifiers == KeyModifiers::CONTROL => { 1
+                        self.should_quit = true; 1
                     }
-                    if c == 'q' {
-                        break;
-                    }
+                    _ => (),
                 }
-                Err(err) => println!("Error: {}", err),
-                _ => {}
+            }
+            if self.should_quit {
+                break;
             }
         }
-        disable_raw_mode().unwrap();
+        disable_raw_mode()?;
+        Ok(())
     }
 }
