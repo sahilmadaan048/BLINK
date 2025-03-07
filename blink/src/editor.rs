@@ -1,34 +1,33 @@
-use crossterm::event::KeyEvent;
 // use std::io::{self, Read};
 use crossterm::terminal::{disable_raw_mode, enable_raw_mode};
-use crossterm::event::{read, Event::Key, KeyCode::Char};
+use crossterm::event::{read, Event::Key, KeyCode::Char, KeyModifiers};
+use crossterm::event::KeyEvent;
+use crossterm::execute;
+use std::io::stdout;
 
 pub struct Editor {
     should_quit: bool,
 }
-
 impl Editor {
     pub fn default() -> Self {
         Editor {should_quit: false}
     }
-
     pub fn run(&mut self) {
         if let Err(err) = self.repl() {
             panic!("{err:?}");
         }
         print!("Goodbye.\r\n");
     }
-
     fn repl(&mut self) -> Result<(), std::io::Error> {
         enable_raw_mode();
         loop {
             if let Key(KeyEvent{
                 code,  modifiers, kind, state
             }) = read()? {
-                println!("Code: {code:?} Modifiers: {modifiers:?} Kind: {kind:?} State: {state:?} \r"); 1
+                println!("Code: {code:?} Modifiers: {modifiers:?} Kind: {kind:?} State: {state:?} \r");
                 match code {
-                    Char('q') if modifiers == KeyModifiers::CONTROL => { 1
-                        self.should_quit = true; 1
+                    Char('q') if modifiers == KeyModifiers::CONTROL => { 
+                        self.should_quit = true; 
                     }
                     _ => (),
                 }
@@ -41,3 +40,5 @@ impl Editor {
         Ok(())
     }
 }
+
+
