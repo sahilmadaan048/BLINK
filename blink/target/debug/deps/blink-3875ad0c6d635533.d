@@ -5,3 +5,6 @@ E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-3875ad0c6d6
 src\main.rs:
 src\editor.rs:
 src\editor\terminal.rs:
+
+# env-dep:CARGO_PKG_NAME=blink
+# env-dep:CARGO_PKG_VERSION=0.1.0
