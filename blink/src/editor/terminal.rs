@@ -2,19 +2,19 @@ use core::fmt::Display;
 use crossterm::cursor::{Hide, MoveTo, Show};
 use crossterm::style::Print;
 use crossterm::terminal::{Clear, ClearType, disable_raw_mode, enable_raw_mode, size};
-use std::io::{stdout, Error, Write};
-use crossterm::{queue, Command};
+use crossterm::{Command, queue};
+use std::io::{Error, Write, stdout};
 
 #[derive(Copy, Clone)]
- pub struct Size {
-     pub height: usize,
-     pub width: usize,
- }
- #[derive(Copy, Clone, Default)]
- pub struct Position {
-     pub col: usize,
-     pub row: usize,
- }
+pub struct Size {
+    pub height: usize,
+    pub width: usize,
+}
+#[derive(Copy, Clone, Default)]
+pub struct Position {
+    pub col: usize,
+    pub row: usize,
+}
 pub struct Terminal;
 
 impl Terminal {
@@ -35,23 +35,23 @@ impl Terminal {
         Self::queue_command(Clear(ClearType::All))?;
         Ok(())
     }
-    
+
     pub fn clear_line() -> Result<(), Error> {
         Self::queue_command(Clear(ClearType::CurrentLine))?;
         Ok(())
     }
-    
+
     pub fn move_caret_to(position: Position) -> Result<(), Error> {
         #[allow(clippy::as_conversions, clippy::cast_possible_truncation)]
         Self::queue_command(MoveTo(position.col as u16, position.row as u16))?;
         Ok(())
     }
-    
+
     pub fn hide_caret() -> Result<(), Error> {
         Self::queue_command(Hide)?;
         Ok(())
     }
-    
+
     pub fn show_caret() -> Result<(), Error> {
         Self::queue_command(Show)?;
         Ok(())
@@ -67,12 +67,12 @@ impl Terminal {
 
         #[allow(clippy::integer_division)]
         let height = height_u16 as usize;
-        
+
         #[allow(clippy::integer_division)]
         let width = width_u16 as usize;
-        Ok(Size {height, width})
+        Ok(Size { height, width })
     }
-    
+
     pub fn execute() -> Result<(), Error> {
         stdout().flush()?;
         Ok(())
