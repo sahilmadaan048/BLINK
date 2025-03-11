@@ -65,10 +65,15 @@ impl Editor {
 
     fn draw_welcome_message() -> Result<()> {
         let mut welcome_message = format!("{NAME} editor -- version {VERSION}");
-        let width = Terminal::size()?.1 as usize;
+        let width = Terminal::size()?.width;
         let len = welcome_message.len();
-        let padding = (width-len)/2;
-        let spaces = " ".repeat(padding-1);
+        // we allow this since we dont care if our welcome message is put in the middle exactly
+        // it's allowed to be a bit to the left or right
+        #[allow(clippy::integer_division)]
+        let padding = (width.saturating_sub(len)) / 2;
+
+        let spaces = " ".repeat(padding.saturating_sub(1));
+
         welcome_message = format!("~{spaces}{welcome_message}");
         welcome_message.truncate(width);
         Terminal::print(&welcome_message);
@@ -81,7 +86,7 @@ impl Editor {
     }
 
     fn draw_rows(&self) -> Result<()> {
-        let (height, width) = Terminal::size()?;
+        let Size {height, ..} = Terminal::size()?;
         for current_row in 0..height {
             Terminal::clear_line()?;
             // Terminal::print("~");
@@ -90,7 +95,7 @@ impl Editor {
             }else {
                 Self::draw_empty_row()?;
             }
-            if current_row + 1 < height {
+            if current_row.saturating_add(1) < height {
                 Terminal::print("\r\n");
             }
         }
