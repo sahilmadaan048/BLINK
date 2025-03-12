@@ -10,8 +10,8 @@ mod terminal;
 mod view;
 use terminal::{Position, Size, Terminal};
 use view::View;
-const NAME: &str = env!("CARGO_PKG_NAME");
-const VERSION: &str = env!("CARGO_PKG_VERSION");
+// const NAME: &str = env!("CARGO_PKG_NAME");
+// const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[derive(Copy, Clone, Default)]
 struct Location {
@@ -111,7 +111,7 @@ impl Editor {
         Terminal::move_caret_to(Position::default())?;
         if self.should_quit {
             Terminal::clear_screen()?;
-            Terminal::print("Goodbye!\r\n");
+            let _ = Terminal::print("Goodbye!\r\n");
         } else {
             View::render()?;
             Terminal::move_caret_to(Position {
