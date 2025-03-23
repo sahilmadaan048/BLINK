@@ -1,14 +1,16 @@
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-874b2b9f9d06ac62.rmeta: src\main.rs src\editor.rs src\editor\documentstatus.rs src\editor\editorcommand.rs src\editor\fileinfo.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-874b2b9f9d06ac62.rmeta: src\main.rs src\editor.rs src\editor\documentstatus.rs src\editor\editorcommand.rs src\editor\fileinfo.rs src\editor\messagebar.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
 
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-874b2b9f9d06ac62.d: src\main.rs src\editor.rs src\editor\documentstatus.rs src\editor\editorcommand.rs src\editor\fileinfo.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-874b2b9f9d06ac62.d: src\main.rs src\editor.rs src\editor\documentstatus.rs src\editor\editorcommand.rs src\editor\fileinfo.rs src\editor\messagebar.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
 
 src\main.rs:
 src\editor.rs:
 src\editor\documentstatus.rs:
 src\editor\editorcommand.rs:
 src\editor\fileinfo.rs:
+src\editor\messagebar.rs:
 src\editor\statusbar.rs:
 src\editor\terminal.rs:
+src\editor\uicomponent.rs:
 src\editor\view.rs:
 src\editor\view\buffer.rs:
 src\editor\view\line.rs:
