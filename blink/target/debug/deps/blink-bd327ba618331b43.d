@@ -1,10 +1,11 @@
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-bd327ba618331b43.rmeta: src\main.rs src\editor.rs src\editor\editorcommand.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-bd327ba618331b43.rmeta: src\main.rs src\editor.rs src\editor\editorcommand.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
 
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-bd327ba618331b43.d: src\main.rs src\editor.rs src\editor\editorcommand.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-bd327ba618331b43.d: src\main.rs src\editor.rs src\editor\editorcommand.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
 
 src\main.rs:
 src\editor.rs:
 src\editor\editorcommand.rs:
+src\editor\statusbar.rs:
 src\editor\terminal.rs:
 src\editor\view.rs:
 src\editor\view\buffer.rs:
