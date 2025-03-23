@@ -1,4 +1,4 @@
-use crossterm::event::{Event, KeyEvent, KeyEventKind, read};
+use crossterm::event::{read, Event, KeyEvent, KeyEventKind};
 use std::{
     env,
     io::Error,
