@@ -1,19 +1,22 @@
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-874b2b9f9d06ac62.rmeta: src\main.rs src\editor.rs src\editor\command.rs src\editor\documentstatus.rs src\editor\fileinfo.rs src\editor\messagebar.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\libblink-874b2b9f9d06ac62.rmeta: src\main.rs src\editor.rs src\editor\command.rs src\editor\commandbar.rs src\editor\documentstatus.rs src\editor\line.rs src\editor\messagebar.rs src\editor\position.rs src\editor\size.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\fileinfo.rs
 
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-874b2b9f9d06ac62.d: src\main.rs src\editor.rs src\editor\command.rs src\editor\documentstatus.rs src\editor\fileinfo.rs src\editor\messagebar.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\line.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\debug\deps\blink-874b2b9f9d06ac62.d: src\main.rs src\editor.rs src\editor\command.rs src\editor\commandbar.rs src\editor\documentstatus.rs src\editor\line.rs src\editor\messagebar.rs src\editor\position.rs src\editor\size.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\fileinfo.rs
 
 src\main.rs:
 src\editor.rs:
 src\editor\command.rs:
+src\editor\commandbar.rs:
 src\editor\documentstatus.rs:
-src\editor\fileinfo.rs:
+src\editor\line.rs:
 src\editor\messagebar.rs:
+src\editor\position.rs:
+src\editor\size.rs:
 src\editor\statusbar.rs:
 src\editor\terminal.rs:
 src\editor\uicomponent.rs:
 src\editor\view.rs:
 src\editor\view\buffer.rs:
-src\editor\view\line.rs:
+src\editor\view\fileinfo.rs:
 
 # env-dep:CARGO_PKG_NAME=blink
 # env-dep:CARGO_PKG_VERSION=0.1.0
