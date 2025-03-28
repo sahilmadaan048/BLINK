@@ -1,24 +1,43 @@
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\release\deps\blink.exe: src\main.rs src\editor.rs src\editor\command.rs src\editor\commandbar.rs src\editor\documentstatus.rs src\editor\line.rs src\editor\messagebar.rs src\editor\position.rs src\editor\size.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\location.rs src\editor\view\fileinfo.rs src\editor\view\searchinfo.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\release\deps\blink.exe: src\main.rs src\editor\mod.rs src\editor\annotatedstring\mod.rs src\editor\annotatedstring\annotatedstringpart.rs src\editor\annotatedstring\annotatedstringiterator.rs src\editor\annotationtype.rs src\editor\command\mod.rs src\editor\command\movecommand.rs src\editor\command\system.rs src\editor\command\edit.rs src\editor\documentstatus.rs src\editor\line\mod.rs src\editor\line\graphemewidth.rs src\editor\line\textfragment.rs src\editor\terminal\mod.rs src\editor\terminal\attribute.rs src\editor\uicomponents\mod.rs src\editor\uicomponents\commandbar.rs src\editor\uicomponents\messagebar.rs src\editor\uicomponents\statusbar.rs src\editor\uicomponents\view\mod.rs src\editor\uicomponents\view\buffer.rs src\editor\uicomponents\view\searchdirection.rs src\editor\uicomponents\view\highlighter\mod.rs src\editor\uicomponents\view\highlighter\syntaxhighlighter.rs src\editor\uicomponents\view\highlighter\rustsyntaxhighlighter.rs src\editor\uicomponents\view\highlighter\searchresulthighlighter.rs src\editor\uicomponents\view\fileinfo.rs src\editor\uicomponents\view\searchinfo.rs src\editor\uicomponents\uicomponent.rs src\editor\annotation.rs src\editor\filetype.rs src\prelude\mod.rs src\prelude\position.rs src\prelude\size.rs src\prelude\location.rs
 
-E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\release\deps\blink.d: src\main.rs src\editor.rs src\editor\command.rs src\editor\commandbar.rs src\editor\documentstatus.rs src\editor\line.rs src\editor\messagebar.rs src\editor\position.rs src\editor\size.rs src\editor\statusbar.rs src\editor\terminal.rs src\editor\uicomponent.rs src\editor\view.rs src\editor\view\buffer.rs src\editor\view\location.rs src\editor\view\fileinfo.rs src\editor\view\searchinfo.rs
+E:\Code_Everyday\WebDev PROJECTS\BLINK\blink\target\release\deps\blink.d: src\main.rs src\editor\mod.rs src\editor\annotatedstring\mod.rs src\editor\annotatedstring\annotatedstringpart.rs src\editor\annotatedstring\annotatedstringiterator.rs src\editor\annotationtype.rs src\editor\command\mod.rs src\editor\command\movecommand.rs src\editor\command\system.rs src\editor\command\edit.rs src\editor\documentstatus.rs src\editor\line\mod.rs src\editor\line\graphemewidth.rs src\editor\line\textfragment.rs src\editor\terminal\mod.rs src\editor\terminal\attribute.rs src\editor\uicomponents\mod.rs src\editor\uicomponents\commandbar.rs src\editor\uicomponents\messagebar.rs src\editor\uicomponents\statusbar.rs src\editor\uicomponents\view\mod.rs src\editor\uicomponents\view\buffer.rs src\editor\uicomponents\view\searchdirection.rs src\editor\uicomponents\view\highlighter\mod.rs src\editor\uicomponents\view\highlighter\syntaxhighlighter.rs src\editor\uicomponents\view\highlighter\rustsyntaxhighlighter.rs src\editor\uicomponents\view\highlighter\searchresulthighlighter.rs src\editor\uicomponents\view\fileinfo.rs src\editor\uicomponents\view\searchinfo.rs src\editor\uicomponents\uicomponent.rs src\editor\annotation.rs src\editor\filetype.rs src\prelude\mod.rs src\prelude\position.rs src\prelude\size.rs src\prelude\location.rs
 
 src\main.rs:
-src\editor.rs:
-src\editor\command.rs:
-src\editor\commandbar.rs:
+src\editor\mod.rs:
+src\editor\annotatedstring\mod.rs:
+src\editor\annotatedstring\annotatedstringpart.rs:
+src\editor\annotatedstring\annotatedstringiterator.rs:
+src\editor\annotationtype.rs:
+src\editor\command\mod.rs:
+src\editor\command\movecommand.rs:
+src\editor\command\system.rs:
+src\editor\command\edit.rs:
 src\editor\documentstatus.rs:
-src\editor\line.rs:
-src\editor\messagebar.rs:
-src\editor\position.rs:
-src\editor\size.rs:
-src\editor\statusbar.rs:
-src\editor\terminal.rs:
-src\editor\uicomponent.rs:
-src\editor\view.rs:
-src\editor\view\buffer.rs:
-src\editor\view\location.rs:
-src\editor\view\fileinfo.rs:
-src\editor\view\searchinfo.rs:
+src\editor\line\mod.rs:
+src\editor\line\graphemewidth.rs:
+src\editor\line\textfragment.rs:
+src\editor\terminal\mod.rs:
+src\editor\terminal\attribute.rs:
+src\editor\uicomponents\mod.rs:
+src\editor\uicomponents\commandbar.rs:
+src\editor\uicomponents\messagebar.rs:
+src\editor\uicomponents\statusbar.rs:
+src\editor\uicomponents\view\mod.rs:
+src\editor\uicomponents\view\buffer.rs:
+src\editor\uicomponents\view\searchdirection.rs:
+src\editor\uicomponents\view\highlighter\mod.rs:
+src\editor\uicomponents\view\highlighter\syntaxhighlighter.rs:
+src\editor\uicomponents\view\highlighter\rustsyntaxhighlighter.rs:
+src\editor\uicomponents\view\highlighter\searchresulthighlighter.rs:
+src\editor\uicomponents\view\fileinfo.rs:
+src\editor\uicomponents\view\searchinfo.rs:
+src\editor\uicomponents\uicomponent.rs:
+src\editor\annotation.rs:
+src\editor\filetype.rs:
+src\prelude\mod.rs:
+src\prelude\position.rs:
+src\prelude\size.rs:
+src\prelude\location.rs:
 
 # env-dep:CARGO_PKG_NAME=blink
-# env-dep:CARGO_PKG_VERSION=0.1.0
+# env-dep:CARGO_PKG_VERSION=1.0.0
