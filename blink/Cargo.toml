@@ -1,9 +1,0 @@
-[package]
-name = "blink"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-crossterm = "0.28.1"
-unicode-segmentation = "1.10.1"
-unicode-width = "0.1.12"
